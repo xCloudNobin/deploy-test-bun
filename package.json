@@ -1,0 +1,25 @@
+{
+  "name": "deploy-test-bun",
+  "version": "1.0.0",
+  "description": "Native Bun taskboard fixture: Bun HTTP server + bun:sqlite persistence, validated CRUD/search/filter, liveness/readiness.",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "engines": {
+    "bun": ">=1.1.0"
+  },
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bash scripts/build.sh",
+    "start": "bun dist/server.js",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "smoke": "bash scripts/smoke.sh",
+    "verify": "bash scripts/verify.sh"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.0",
+    "typescript": "^5.6.0"
+  }
+}
